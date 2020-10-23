@@ -1,0 +1,447 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: sans-serif;
+  background-color: #e5e5e5;
+}
+
+.header{
+  background: #FA8C16;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  margin: 30px;  
+}
+
+.header-wrapper {
+  /* border: 1px solid #000; - эту обводку мы использовали чтобы лучше понимать граница навигационной панели и правильно проставить отступы */
+  max-width: 1200px;
+  width: 90%; /*ширина header-wrapper будет пропорциональной*/
+  margin: auto;
+  display: flex;
+  justify-content: space-between; /*распределение элементов равномерно по всей header-wrapper*/
+  align-items: center; /*выравнивание элементов по середине*/
+}
+
+.header-nav{
+  margin-left: 60px; /*всегда будет удерживаться отступ от лого 60 пикселей*/
+  margin-right: auto; /*отступ от поисковой строчки будет высчитываться автоматически*/
+}
+
+.header-menu{
+  display: flex; /*теперь элементы меню будут распределены не вертикально а горизонтально*/
+  list-style: none; /*отключение стиля списка, в данном случае точек*/
+  padding: 0;
+  margin: 0;  
+}
+
+.header-menu-link{
+  text-decoration: none; /*отключение стиля Подчеркивания у текста (подчеркивание у ссылок по умолчанию)*/
+  color: #fafafa;
+  margin-right: 15px;
+  font-size: 14px; /*Размер шрифта*/
+  line-height: 22px; /*Высота строки*/
+}
+
+.input-group{
+  width: 237px;
+  height: 32px;
+  position: relative;/*"размазываем" поле поиска и кнопку внутри одного блока*/
+  background: #FFFFFF;
+  border-radius: 4px;
+  overflow: hidden; /*за пределы блока ничего не будет вываливаться*/
+  border: 1px solid #D9D9D9;
+}
+
+.search-input {
+  height: 100%;
+  width: 80%;
+  border: none;
+  font-size: 14px;
+  line-height: 22px;
+  padding-left: 12px;
+}
+.search-button{
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  background-color: #fff;
+  border: none;
+  right: 0; /*сделали так чтобы кнопка поиска примкнула к правому краю*/
+  top: 0; /*сделали так чтобы кнопка поиска примкнула к верхнему краю*/
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Установка стиля (в данном случае цвета) для псевдокласса placeholder во всех браузерах */
+.search-input::-moz-placeholder { color: #BFBFBF; /* Цвет подсказывающего текста */  }
+   .search-input::-webkit-input-placeholder { color: #BFBFBF; }
+   .search-input:-ms-input-placeholder { color:#BFBFBF; }
+   .search-input::-ms-input-placeholder { color: #BFBFBF; }
+   .search-input::placeholder { color: #BFBFBF; } 
+   
+.menu-toggle{
+  display: none;
+
+}
+
+
+
+.content {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.posts {
+  width: 67%;
+}
+.post {
+  background-color: #ffffff;
+  border: 1px solid #E8E8E8;
+  margin-bottom: 30px;
+}
+
+.post-body{
+  padding-top: 35px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 0;
+}
+
+.post-title{
+  margin-top: 0;
+  margin-bottom: 19px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.post-text{
+  color: #262626;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+
+
+.tags{
+  margin-bottom: 22px;
+}
+
+.tag{
+  color: #BFBFBF;
+  font-size: 14px;
+  line-height: 22px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.post-footer{
+  background: #FAFAFA;
+  border-top: 1px solid #E8E8E8;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+.post-buttons{
+  display: flex;
+  align-items: center;
+  
+}
+
+
+.post-button .icon{
+  fill: #8c8c8c
+}
+
+.icon-like, .icon-comment{
+  margin-right: 6px;
+}
+
+.post-button{
+  background-color: transparent;
+  border:none;
+  color: #8c8c8c;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 22px;
+  margin-right: 19px;
+  cursor: pointer;
+}
+
+.post-author{
+  display: flex;
+  align-items: center;
+  text-align: right;
+}
+
+.author-avatar {
+  width: 34px;
+  height: 34px;
+  margin-left: 9px;
+  border-radius: 4px;
+}
+
+.author-username{
+  display: block;
+  color: #8c8c8c;
+  font-size: 12px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.post-time{
+  color: #BFBFBF;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.user {
+  background-color: #fafafa;
+  border: 1px solid #E8E8E8
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar{
+  width: 31%;
+}
+
+
+
+.user-info{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.user-avatar{
+  border-radius: 50%;
+  margin-right: 17px;
+}
+
+.user-name{
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: 595959;
+}
+
+.icon-exit{
+  width: 20px;
+  height: 20px;
+  fill:#000;
+}
+
+.sidebar-nav{
+  background-color: #fff;
+}
+
+.sidebar-menu{
+  margin: 0;
+  border: 1px solid #e8e8e8;
+  border-top:none;
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-menu-link{
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  columns: #595959;
+  padding: 16px 48px;
+  display: inline-block;
+  width: 100%;
+}
+
+.sidebar-menu-link:hover{
+  background-color: #fffbe6;
+}
+
+.sidebar-menu-link.active {
+  background-color: #fffbe6;
+  border-right: 3px solid #FAAD14;
+}
+
+.button{
+  background: #FAAD14;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px; 
+  padding: 13px;
+}
+
+.button-new-post{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 13px;
+  margin-top: 20px;
+}
+
+.icon-fire{
+  fill: #fff;
+  width: 11px;
+  height: 13px;
+  margin-right: 10px;
+}
+
+.card{
+  background: #FFFFFF;
+  border: 1px solid #E8E8E8;
+  margin-top: 20px;
+  
+}
+
+.card-header{
+  background: #FAFAFA;
+  border-bottom: 1px solid #E8E8E8;
+  padding: 23px 25px;
+
+}
+
+.card-title{
+  margin: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #595959;
+}
+
+.card-body{
+  padding: 22px 20px 30px 25px;
+}
+
+.card-body-title{
+  margin: 0 0 10px;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #D48806;
+}
+
+.card-text{
+  font-size: 14px;
+  line-height: 22px;
+  color: #262626;
+  margin: 10px 0;
+}
+
+.promo{
+  display: block;
+  background-color: #fff;
+  background-image: url('../img/promo.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 260px;
+  border: 1px solid #e8e8e8;
+  margin-top: 20px;
+  position: relative;
+}
+
+.promo::before{
+  content:"Реклама";
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #c4c4c4 ;
+  padding-left: 26px;
+  padding-right: 26px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  color:#fff;
+}
+
+
+@media (max-width: 990px){
+  .menu-toggle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  
+    width: 30px;
+    height: 20px;
+    margin-left: 12px;
+  }
+  .menu-toggle span{
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+  }
+
+  .header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  .sidebar{
+    
+    position: fixed;
+    top: 64px;
+    right: 0;
+    bottom: 0;
+    height:100%;
+    width: 320px;
+    background-color: #fff;
+    box-shadow:1px 1px 10px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    transform: translate(100%);
+    transition: transform 0.2s;
+    overflow-y: auto;
+
+  }
+  .sidebar.visible{
+    display: block;
+    transform: translate(0);
+  }
+  .posts{
+    widows: 100%;
+  }
+  .header-nav{
+    margin-left: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fa8c16;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    box-shadow:0px 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  .header-menu{
+    width: 90%;
+    margin: auto;
+  }
+}
