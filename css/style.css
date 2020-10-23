@@ -2,8 +2,8 @@
   font-family: "SFUIDisplay-Regular";
   src: local("SFUIDisplay-Regular"),
        local("SFUIDisplay-Regular"),
-       url('.../fonts/SFUIDisplay-Regular.woff') format("woff"),
-       url('.../fonts/SFUIDisplay-Regular.woff2') format("woff2");
+       url('../fonts/SFUIDisplay-Regular.woff') format("woff"),
+       url('../fonts/SFUIDisplay-Regular.woff2') format("woff2");
        font-weight: normal;
 }
 
@@ -11,8 +11,8 @@
   font-family: "SFUIDisplay-Semibold";
   src: local("SFUIDisplay-Semibold"),
        local("SFUIDisplay-Semibold"),
-       url('.../fonts/SFUIDisplay-Semibold.woff') format("woff"),
-       url('.../fonts/SFUIDisplay-Semibold.woff2') format("woff2");
+       url('../fonts/SFUIDisplay-Semibold.woff') format("woff"),
+       url('../fonts/SFUIDisplay-Semibold.woff2') format("woff2");
        font-weight: bold;
 }
 
