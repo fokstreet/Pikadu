@@ -1,9 +1,27 @@
+@font-face {
+  font-family: "SFUIDisplay-Regular";
+  src: local("SFUIDisplay-Regular"),
+       local("SFUIDisplay-Regular"),
+       url('.../fonts/SFUIDisplay-Regular.woff') format("woff"),
+       url('.../fonts/SFUIDisplay-Regular.woff2') format("woff2");
+       font-weight: normal;
+}
+
+@font-face {
+  font-family: "SFUIDisplay-Semibold";
+  src: local("SFUIDisplay-Semibold"),
+       local("SFUIDisplay-Semibold"),
+       url('.../fonts/SFUIDisplay-Semibold.woff') format("woff"),
+       url('.../fonts/SFUIDisplay-Semibold.woff2') format("woff2");
+       font-weight: bold;
+}
+
 *{
   box-sizing: border-box;
 }
 
-body{
-  font-family: sans-serif;
+body {  
+  font-family: 'SFUIDisplay-Regular', sans-serif;
   background-color: #e5e5e5;
 }
 
@@ -116,9 +134,9 @@ body{
 }
 
 .post-title{
+  font-family: 'SFUIDisplay-Semibold', sans-serif;
   margin-top: 0;
   margin-bottom: 19px;
-  font-weight: 600;
   font-size: 16px;
   line-height: 24px;
 }
@@ -235,7 +253,7 @@ body{
 }
 
 .user-name{
-  font-style: normal;
+  font-family: 'SFUIDisplay-Semibold', sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -325,8 +343,7 @@ body{
 
 .card-title{
   margin: 0;
-  font-style: normal;
-  font-weight: 600;
+  font-family: 'SFUIDisplay-Semibold', sans-serif;
   font-size: 16px;
   line-height: 24px;
   color: #595959;
@@ -337,10 +354,9 @@ body{
 }
 
 .card-body-title{
+  font-family: 'SFUIDisplay-Semibold', sans-serif;
   margin: 0 0 10px;
   text-decoration: none;
-  font-style: normal;
-  font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   color: #D48806;
